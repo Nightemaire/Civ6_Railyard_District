@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- RailyardIcons -->
+<!-- Author: Olorin -->
+<!-- DateCreated: 8/5/2020 2:43:37 PM -->
+<GameData>
+	<!-- For simplicity, reuse an existing icon. -->
+	<IconDefinitions>
+		<Row Name="ICON_DISTRICT_RAILYARD"						Atlas="ICON_ATLAS_EXPANSION_2_DISTRICTS" Index="0"/>
+		<Row Name="ICON_BUILDING_RAILYARD_STATION"						Atlas="ICON_ATLAS_BUILDINGS" Index="0"/>
+		<Row Name="ICON_BUILDING_RAILYARD_SUBWAY"						Atlas="ICON_ATLAS_BUILDINGS" Index="0"/>
+		<Row Name="ICON_BUILDING_RAILYARD_MONORAIL"						Atlas="ICON_ATLAS_BUILDINGS" Index="0"/>
+		<Row Name="ICON_UNIT_UNIT_RAILROAD_BUILDER"						Atlas="ICON_ATLAS_UNITS" Index="0"/>
+	</IconDefinitions>
+</GameData>

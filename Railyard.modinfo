@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mod id="eb2ce3af-df1e-4939-82a1-b320aeaf07ef" version="1">
+  <Properties>
+    <Name>Railyard District</Name>
+    <Description>Adds a railyard district to the game to increase the utilization of railroads and make them a key feature of the industrial era.</Description>
+    <Created>1597529681</Created>
+    <Teaser>Adds a railyard district to the game to increase the utilization of railroads and make them a key feature of the industrial era</Teaser>
+    <Authors>bcbarrett</Authors>
+    <CompatibleVersions>2.0</CompatibleVersions>
+  </Properties>
+  <Dependencies>
+    <Mod id="4873eb62-8ccc-4574-b784-dda455e74e68" title="Expansion: Gathering Storm" />
+  </Dependencies>
+  <InGameActions>
+    <UpdateDatabase id="RailyardDistrictUpdate">
+      <File>RailBuilder.xml</File>
+      <File>RailyardBuildings.xml</File>
+      <File>RailyardDistrict.xml</File>
+    </UpdateDatabase>
+    <UpdateIcons id="RailyardIconUpdate">
+      <File>RailyardIcons.xml</File>
+    </UpdateIcons>
+    <UpdateText id="RailyardTextUpdate">
+      <File>RailyardText.xml</File>
+    </UpdateText>
+    <AddGameplayScripts id="RailyardBuildAction">
+      <File>RailroadConstruction.lua</File>
+    </AddGameplayScripts>
+  </InGameActions>
+  <Files>
+    <File>RailBuilder.xml</File>
+    <File>RailroadConstruction.lua</File>
+    <File>RailyardBuildings.xml</File>
+    <File>RailyardDistrict.xml</File>
+    <File>RailyardIcons.xml</File>
+    <File>RailyardText.xml</File>
+  </Files>
+</Mod>

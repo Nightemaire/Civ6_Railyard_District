@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- RailyardText -->
+<!-- Author: Olorin -->
+<!-- DateCreated: 8/4/2020 6:14:30 PM -->
+<GameData>
+	<LocalizedText>
+		<!-- RAILYARD -->
+		<Row Tag="LOC_DISTRICT_RAILYARD_NAME" Language="en_US">
+			<Text>Railyard</Text>
+		</Row>
+		<Row Tag="LOC_DISTRICT_RAILYARD_DESCRIPTION" Language="en_US">
+			<Text>A railyard will connect your city to nearby rail infrastructure within 10 tiles.</Text>
+		</Row>
+		<Row Tag="LOC_DISTRICT_DISTRICT_RAILYARD" Language="en_US">
+			<Text>+{2_num} [ICON_Prod] Production from adjacent Strategic Resources.</Text>
+		</Row>
+
+		<Row Tag="LOC_DISTRICT_RAILYARD_DESCRIPTION_ADJ_INDUSTRIAL" Language="en_US">
+			<Text>+{2_num} [ICON_Prod] Production from adjacent Railyard.</Text>
+		</Row>
+
+		<Row Tag="LOC_DISTRICT_RAILYARD_DESCRIPTION_ADJ_HARBOR" Language="en_US">
+			<Text>+{2_num} [ICON_Gold] Gold from adjacent Railyard.</Text>
+		</Row>
+
+		<Row Tag="LOC_DISTRICT_RAILYARD_DESCRIPTION_ADJ_CAMPUS" Language="en_US">
+			<Text>+{1_num} [ICON_Science] Science from adjacent Railyard.</Text>
+		</Row>
+
+		<Row Tag="LOC_DISTRICT_RAILYARD_DESCRIPTION_ADJ_THEATER" Language="en_US">
+			<Text>+{2_num} [ICON_Culture] Culture from adjacent Railyard.</Text>
+		</Row>
+
+		<Row Tag="LOC_DISTRICT_RAILYARD_ADJ_GOVT" Language="en_US">
+			<Text>+{1_num} [ICON_Culture] Culture from adjacent Government Plaza.</Text>
+		</Row>
+
+		<!-- BUILDINGS -->
+		<Row Tag="LOC_BUILDING_RAILYARD_STATION" Language="en_US">
+			<Text>Rail Station</Text>
+		</Row>
+
+		<Row Tag="LOC_BUILDING_RAILYARD_STATION_DESCRIPTION" Language="en_US">
+			<Text>Building a railstation converts all routes in the city boundaries to railroads. Requires iron and coal to produce.</Text>
+		</Row>
+
+		<Row Tag="LOC_BUILDING_RAILYARD_SUBWAY" Language="en_US">
+			<Text>Subway System</Text>
+		</Row>
+
+		<Row Tag="LOC_BUILDING_RAILYARD_SUBWAY_DESCRIPTION" Language="en_US">
+			<Text>Building a subway system connects all districts in the city by railroads. Requires power to maintain.</Text>
+		</Row>
+
+		<Row Tag="LOC_BUILDING_RAILYARD_MONORAIL" Language="en_US">
+			<Text>Monorail</Text>
+		</Row>
+
+		<Row Tag="LOC_BUILDING_RAILYARD_MONORAIL_DESCRIPTION" Language="en_US">
+			<Text>Building a monorail does something I haven't figured out yet.</Text>
+		</Row>
+
+		<!-- UNITS -->
+		<Row Tag="LOC_UNIT_UNIT_RAILROAD_BUILDER_NAME" Language="en_US">
+			<Text>Railroad Builder</Text>
+		</Row>
+
+		<Row Tag="LOC_UNIT_RAILROAD_BUILDER_DESCRIPTION" Language="en_US">
+			<Text>The Railroad Builder costs iron to produce, and is capable of building 10 tiles worth of railroad. Railroads are created as the Railroad Builder moves and requires no action.</Text>
+		</Row>
+
+	</LocalizedText>
+</GameData>

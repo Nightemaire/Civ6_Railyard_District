@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GameData1 -->
+<!-- Author: bcbarrett -->
+<!-- DateCreated: 8/4/2020 6:09:37 PM -->
+<GameData>
+	<Types>
+		<Row Kind="KIND_DISTRICT" Type="DISTRICT_RAILYARD"/>
+	</Types>
+
+	<Districts>
+		<Row DistrictType="DISTRICT_RAILYARD"
+			 Name="LOC_DISTRICT_RAILYARD_NAME"
+			 Description="LOC_DISTRICT_RAILYARD_DESCRIPTION"
+			 PrereqTech="TECH_STEAM_POWER"
+			 OnePerCity="true"
+			 
+			 Cost="75"
+			 CostProgressionParam1="40"
+			 CostProgressionModel="COST_PROGRESSION_NUM_UNDER_AVG_PLUS_TECH"
+			 Maintenance="2"
+			 PlunderAmount="75"
+			 
+			 RequiresPopulation="false"
+			 RequiresPlacement="true"
+			 PlunderType="PLUNDER_GOLD"
+			 MilitaryDomain="NO_DOMAIN"
+			 CaptureRemovesCityDefenses="false"
+			 CaptureRemovesBuildings="false"
+			 ZOC="false"
+			 InternalOnly="false"
+			 NoAdjacentCity="false"
+			 Aqueduct="false"
+			 AdvisorType="ADVISOR_GENERIC"
+			 CityStrengthModifier="2"
+			 />
+	</Districts>
+
+	<District_Adjacencies>
+		<Row DistrictType="DISTRICT_INDUSTRIAL_ZONE" YieldChangeId="Railyard_Production" />
+		<Row DistrictType="DISTRICT_HARBOR" YieldChangeId="Railyard_Gold" />
+		<Row DistrictType="DISTRICT_CAMPUS" YieldChangeId="Railyard_Science" />
+		<Row DistrictType="DISTRICT_THEATER" YieldChangeId="Railyard_Culture" />
+		<Row DistrictType="DISTRICT_RAILYARD" YieldChangeId="Railyard_Govt" />
+	</District_Adjacencies>
+	
+	<District_TradeRouteYields>
+		<Row DistrictType="DISTRICT_RAILYARD" YieldChangeAsInternationalDestination="2" YieldChangeAsDomesticDestination="4" YieldChangeAsOrigin="6" YieldType="YIELD_GOLD"/>
+		<Row DistrictType="DISTRICT_RAILYARD" YieldChangeAsInternationalDestination="1" YieldChangeAsDomesticDestination="2" YieldChangeAsOrigin="4" YieldType="YIELD_PRODUCTION"/>
+	</District_TradeRouteYields>
+		
+	<Adjacency_YieldChanges>
+		<Row ID="Railyard_Production" Description="LOC_DISTRICT_RAILYARD_DESCRIPTION_ADJ_INDUSTRIAL" YieldType="YIELD_PRODUCTION" YieldChange="2" TilesRequired="1" AdjacentDistrict="DISTRICT_RAILYARD"/>
+		<Row ID="Railyard_Gold" Description="LOC_DISTRICT_RAILYARD_DESCRIPTION_ADJ_HARBOR" YieldType="YIELD_GOLD" YieldChange="2" TilesRequired="1" AdjacentDistrict="DISTRICT_RAILYARD"/>
+		<Row ID="Railyard_Science" Description="LOC_DISTRICT_RAILYARD_DESCRIPTION_ADJ_CAMPUS" YieldType="YIELD_SCIENCE" YieldChange="1" TilesRequired="1" AdjacentDistrict="DISTRICT_RAILYARD"/>
+		<Row ID="Railyard_Culture" Description="LOC_DISTRICT_RAILYARD_DESCRIPTION_ADJ_THEATER" YieldType="YIELD_CULTURE" YieldChange="1" TilesRequired="1" AdjacentDistrict="DISTRICT_RAILYARD"/>
+		<Row ID="Railyard_Govt" Description="LOC_DISTRICT_RAILYARD_ADJ_GOVT" YieldType="YIELD_CULTURE" YieldChange="1" TilesRequired="1" AdjacentDistrict="DISTRICT_GOVERNMENT"/>
+	</Adjacency_YieldChanges>
+
+	<District_ValidTerrains>
+		<Row DistrictType="DISTRICT_RAILYARD" TerrainType="TERRAIN_GRASS"/>
+		<Row DistrictType="DISTRICT_RAILYARD" TerrainType="TERRAIN_PLAINS"/>
+		<Row DistrictType="DISTRICT_RAILYARD" TerrainType="TERRAIN_TUNDRA"/>
+		<Row DistrictType="DISTRICT_RAILYARD" TerrainType="TERRAIN_SNOW"/>
+		<Row DistrictType="DISTRICT_RAILYARD" TerrainType="TERRAIN_DESERT"/>
+	</District_ValidTerrains>
+
+	<District_GreatPersonPoints>
+		<Row DistrictType="DISTRICT_RAILYARD" GreatPersonClassType="GREAT_PERSON_CLASS_ENGINEER" PointsPerTurn="1"/>
+	</District_GreatPersonPoints>
+
+	<District_CitizenYieldChanges>
+		<Row DistrictType="DISTRICT_RAILYARD" YieldType="YIELD_GOLD" YieldChange="1"/>
+		<Row DistrictType="DISTRICT_RAILYARD" YieldType="YIELD_PRODUCTION" YieldChange="1"/>
+		<Row DistrictType="DISTRICT_RAILYARD" YieldType="YIELD_FOOD" YieldChange="1"/>
+	</District_CitizenYieldChanges>
+
+	<Modifiers>
+		<Row>
+			<ModifierId>MODIFIER_RAILYARD_GRANT_RAILSTATION</ModifierId>
+			<ModifierType>MODIFIER_SINGLE_CITY_GRANT_BUILDING_IN_CITY_IGNORE</ModifierType>
+			<RunOnce>true</RunOnce>
+			<Permanent>true</Permanent>
+		</Row>
+	</Modifiers>
+	
+	<DistrictModifiers>
+		<Row>
+			<DistrictType>DISTRICT_RAILYARD</DistrictType>
+			<ModifierId>MODIFIER_RAILYARD_GRANT_RAILSTATION</ModifierId>
+		</Row>
+	</DistrictModifiers>
+
+	<ModifierArguments>
+		<Row>
+			<ModifierId>MODIFIER_RAILYARD_GRANT_RAILSTATION</ModifierId>
+			<Name>BuildingType</Name>
+			<Value>BUILDING_RAILYARD_STATION</Value>
+		</Row>
+	</ModifierArguments>
+</GameData>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GameData1 -->
+<!-- Author: Olorin -->
+<!-- DateCreated: 8/5/2020 1:21:46 PM -->
+<GameData>
+	<Types>
+		<Row Type="BUILDING_RAILYARD_STATION" Kind="KIND_BUILDING" />
+		<Row Type="BUILDING_RAILYARD_SUBWAY" Kind="KIND_BUILDING" />
+		<Row Type="BUILDING_RAILYARD_MONORAIL" Kind="KIND_BUILDING" />
+		<!--
+		<Row Type="BUILDING_RAILYARD_BULLET_TRAIN" Kind="KIND_BUILDING" />
+		<Row Type="BUILDING_RAILYARD_HYPERLOOP" Kind="KIND_BUILDING" />
+		-->
+	</Types>
+
+	<Buildings>
+		<Row BuildingType="BUILDING_RAILYARD_STATION"
+			 Name="LOC_BUILDING_RAILYARD_STATION"
+			 Description="LOC_BUILDING_RAILYARD_STATION_DESCRIPTION"
+			 PrereqDistrict="DISTRICT_RAILYARD"
+			 Housing="0"
+			 CitizenSlots="0"
+			 PurchaseYield="YIELD_PRODUCTION"
+			 Cost="50"
+			 AdvisorType="ADVISOR_GENERIC"
+			 Maintenance="1"
+			 PrereqTech="TECH_STEAM_POWER"
+			 />
+		
+		<Row BuildingType="BUILDING_RAILYARD_SUBWAY"
+			 Name="LOC_BUILDING_RAILYARD_SUBWAY"
+			 Description="LOC_BUILDING_RAILYARD_SUBWAY_DESCRIPTION"
+			 PrereqDistrict="DISTRICT_RAILYARD"
+			 Housing="0"
+			 CitizenSlots="1"
+			 PurchaseYield="YIELD_PRODUCTION"
+			 Cost="65"
+			 AdvisorType="ADVISOR_GENERIC"
+			 Maintenance="1"
+			 PrereqTech="TECH_STEEL"
+			 />
+		
+		<Row BuildingType="BUILDING_RAILYARD_MONORAIL"
+			 Name="LOC_BUILDING_RAILYARD_MONORAIL"
+			 Description="LOC_BUILDING_RAILYARD_MONORAIL_DESCRIPTION"
+			 PrereqDistrict="DISTRICT_RAILYARD"
+			 Housing="0"
+			 CitizenSlots="1"
+			 PurchaseYield="YIELD_PRODUCTION"
+			 Cost="80"
+			 AdvisorType="ADVISOR_GENERIC"
+			 Maintenance="1"
+			 PrereqTech="TECH_ELECTRICITY"
+			 />
+		<!--
+		<Row BuildingType="BUILDING_RAILYARD_BULLET_TRAIN"
+			 Name="LOC_BUILDING_RAILYARD_BULLET_TRAIN"
+			 Description="LOC_BUILDING_RAILYARD_BULLET_TRAIN_DESCRIPTION"
+			 PrereqDistrict="DISTRICT_RAILYARD"
+			 Housing="0"
+			 CitizenSlots="1"
+			 PurchaseYield="YIELD_PRODUCTION"
+			 Cost="50"
+			 AdvisorType="ADVISOR_GENERIC"
+			 Maintenance="1"
+			 PrereqTech="TECH_COMPOSITES"
+			 RequiredPower="2"
+			 />
+
+		<Row BuildingType="BUILDING_RAILYARD_HYPERLOOP"
+			 Name="LOC_BUILDING_RAILYARD_HYPERLOOP"
+			 Description="LOC_BUILDING_RAILYARD_HYPERLOOP_DESCRIPTION"
+			 PrereqDistrict="DISTRICT_RAILYARD"
+			 Housing="0"
+			 CitizenSlots="1"
+			 PurchaseYield="YIELD_PRODUCTION"
+			 Cost="50"
+			 AdvisorType="ADVISOR_GENERIC"
+			 Maintenance="1"
+			 PrereqTech="TECH_NUCLEAR_FUSION"
+			 RequiredPower="2"
+			 />
+			 -->
+	</Buildings>
+
+	<Buildings_XP2>
+		<Row BuildingType="BUILDING_RAILYARD_SUBWAY"
+				 RequiredPower="2"
+			 />
+
+		<Row BuildingType="BUILDING_RAILYARD_MONORAIL"
+			 RequiredPower="4"
+			 />
+	</Buildings_XP2>
+
+	<BuildingPrereqs>
+		<Row Building="BUILDING_RAILYARD_SUBWAY" PrereqBuilding="BUILDING_RAILYARD_STATION"/>
+		<Row Building="BUILDING_RAILYARD_MONORAIL" PrereqBuilding="BUILDING_RAILYARD_SUBWAY"/>
+	</BuildingPrereqs>
+	
+	<Building_YieldChanges>
+		<Row BuildingType="BUILDING_RAILYARD_SUBWAY" YieldType="YIELD_PRODUCTION" YieldChange="2"/>
+		
+		<Row BuildingType="BUILDING_RAILYARD_MONORAIL" YieldType="YIELD_PRODUCTION" YieldChange="4"/>
+		<Row BuildingType="BUILDING_RAILYARD_MONORAIL" YieldType="YIELD_GOLD" YieldChange="2"/>
+	</Building_YieldChanges>
+	
+	<BuildingModifiers>
+		<Row BuildingType="BUILDING_RAILYARD_STATION" ModifierId="RAILSTATION_ADDTRADEROUTE"/>
+		<!--<Row BuildingType="BUILDING_RAILYARD_STEELWORKS" ModifierId="IRRIGATION_CANAL_GROWTH"/>	-->
+	</BuildingModifiers>
+	
+	
+	<Modifiers>
+		<Row>
+			<ModifierId>RAILSTATION_ADDTRADEROUTE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_TRADE_ROUTE_CAPACITY</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>RAILSTATION_GRANT_RAILBUILDER</ModifierId>
+			<ModifierType>MODIFIER_SINGLE_CITY_GRANT_UNIT_IN_CITY</ModifierType>
+		</Row>
+	</Modifiers>
+
+	<ModifierArguments>
+		<Row>
+			<ModifierId>RAILSTATION_ADDTRADEROUTE</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		
+		<Row>
+			<ModifierId>RAILSTATION_GRANT_RAILBUILDER</ModifierId>
+			<Name>UnitType</Name>
+			<Value>UNIT_RAILROAD_BUILDER</Value>
+		</Row>
+		<Row>
+			<ModifierId>RAILSTATION_GRANT_RAILBUILDER</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+	</ModifierArguments>
+</GameData>
